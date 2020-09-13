@@ -4,6 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Lab 1</title>
+    <style>
+        /* Tooltip container */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+        }
+
+        /* Tooltip text */
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+        
+        /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        .tooltip:hover .tooltiptext {
+        visibility: visible;
+        }
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .pagination a:hover:not(.active) {background-color: #ddd;}
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the link color on hover */
+        li a:hover {
+            background-color: #555;
+            color: white;
+        }
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
+    </style>
 </head>
 <body>
     <div>
@@ -11,16 +111,46 @@
     </div>
     <div>
         <h2>Tooltips</h2>
-        <p>Tooltops is </p>
+        <p>A Tooltops is often used to specify extra information about something when the user moves the mouse pointer over an element:</p>
+    </div>
+    <div class="tooltip">Hover over me
+        <span class="tooltiptext">Tooltip text</span>
     </div>
     <div>
         <h2>Pagination</h2>
+        <p>Pagination is If you have a website with lots of pages, you may wish to add some sort of pagination to each page: </p>
+    </div>
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
     </div>
     <div>
         <h2>Navigator bar</h2>
+        <p>Having easy-to-use navigation is important for any web site </p>
     </div>
+    <ul>
+        <li><a href="default.asp">Home</a></li>
+        <li><a href="news.asp">News</a></li>
+        <li><a href="contact.asp">Contact</a></li>
+        <li><a href="about.asp">About</a></li>
+      </ul>
     <div>
         <h2>Dropdown</h2>
+        <p>Move the mouse over the button to open the dropdown menu.</p>
     </div>
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        </div>
+      </div>
 </body>
 </html>
