@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        div{
+            margin: auto;
+            text-align: center;
+        }
+        #id_div {
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            
+            animation-name: example;
+                animation-duration: 10s;
+        }
+        /* @keyframes example {
+            from {
+                background-color: skyblue;
+                height: 300px;
+                width: 300px;
+                margin: auto;
+            }
+            to {
+                background-color: tomato;
+                margin: auto;
+                border: 1px solid black;
+            }
+        } */
+        @keyframes example {
+            0% {
+                background-color: skyblue;
+            }
+            25% {
+                background-color: tomato;
+            }
+            50% {
+                background-color: skyblue;
+                /* visibility: hidden; */
+            }
+            100% {
+                background-color: tomato;
+                
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div><h1>This is CSS animation</h1></div>
+    <div id="id_div"></div>
+</body>
+</html>
